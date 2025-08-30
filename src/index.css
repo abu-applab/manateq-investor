@@ -5,7 +5,7 @@
   font-style: normal;
   font-display: swap;
 }
- 
+
 @font-face {
   font-family: 'Inter';
   src: url('/assets/fonts/inter/web/Inter-Medium.woff2') format('woff2');
@@ -13,7 +13,7 @@
   font-style: normal;
   font-display: swap;
 }
- 
+
 @font-face {
   font-family: 'Inter';
   src: url('/assets/fonts/inter/web/Inter-SemiBold.woff2') format('woff2');
@@ -21,7 +21,7 @@
   font-style: normal;
   font-display: swap;
 }
- 
+
 @font-face {
   font-family: 'Inter';
   src: url('/assets/fonts/inter/web/Inter-Bold.woff2') format('woff2');
@@ -110,6 +110,7 @@
 }
 
 .dark {
+  --font-sans: "Inter";
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
@@ -144,14 +145,19 @@
 }
 
 @layer base {
-  * { 
+  * {
     @apply border-border outline-ring/50;
     @apply font-sans;
   }
+
   html {
     @apply font-sans
   }
-  body {
+
+  /* body {
     @apply font-sans;
+  } */
+  body {
+    font-family: 'Inter', sans-serif;
   }
 }
